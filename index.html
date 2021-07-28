@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="image/devchallenges.png" />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+
+     <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>  
+
+    <title>Checkout Page Master</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="success--message">
+        <p>Your submit is successfull...</p>
+      </div>
+        <h1>Checkout</h1>
+        <div class="content">
+          <form action="" id="form">
+            
+            <h4>Contact information</h4>
+            <div class="form--group">
+              <label for="email">E-mail</label>
+              <div class="custom--input">
+                <span class="material-icons">email</span>
+                <input type="email" name="email" id="email" placeholder="Enter your email...">
+              </div>
+              <small class="message" >Error message</small>
+            </div>
+
+            <div class="form--group">
+              <label for="email">Phone</label>
+              <div class="custom--input">
+                <span class="material-icons">phone</span>
+                <input type="phone" name="phone" id="phone" placeholder="Enter your phone...">
+              </div>
+              <small class="message" >Error message</small>
+            </div>
+
+            <h4>Shipping address</h4>
+            <div class="form--group">
+              <label for="email">Full name</label>
+              <div class="custom--input">
+                <span class="material-icons">account_circle</span>
+                <input type="fullname" name="fullname" id="fullname" placeholder="John Doe">
+              </div>
+              <small class="message" >Error message</small>
+            </div>
+            <div class="form--group">
+              <label for="email">Address</label>
+              <div class="custom--input">
+                <span class="material-icons">home</span>
+                <input type="address" name="address" id="address" placeholder="Your address...">
+              </div>
+              <small class="message" >Error message</small>
+            </div>
+            <div class="form--group">
+              <label for="email">City</label>
+              <div class="custom--input">
+                <span class="material-icons">apartment</span>
+                <input type="city" name="city" id="city" placeholder="Your city...">
+              </div>
+              <small class="message" >Error message</small>
+            </div>
+
+            <div class="row">
+              <div class="form--group">
+                <label for="email">Country</label>
+                <div class="custom--input">
+                  <span class="material-icons">public</span>
+                  <div class="custom--select">
+                    <select name="" id="country">
+                      <option value="">Your country...</option>
+                      <option value="1">Benin</option>
+                      <option value="2">Togo</option>
+                      <option value="3">Nigeria</option>
+                    </select>
+                  </div>
+              <small class="message" >Error message</small>
+                </div>
+              </div>
+              <div class="form--group">
+                <label for="postal_code">Postal code</label>
+                <div class="custom--input">
+                  <span class="material-icons">public</span>
+                  <input type="text" name="postal_code" id="postal_code" placeholder="Postal code...">
+                </div>
+              <small class="message" >Error message</small>
+              </div>
+            </div>
+
+            <div class="form--group">
+              <!-- <div class="custom--input"> -->
+                <input type="checkbox" name="" id="">
+              <!-- </div> -->
+              <label for="checkbox">Save this information for next time</label>
+            </div>
+
+            <button type="submit">Continue</button>
+          </form>
+
+          <!-- left side  -->
+          <div class="buy--article">
+            <div>
+              <div class="article--details" >
+                <img src="image/photo1.png" alt="">
+                <div class="article--info">
+                  <div class="article--name">
+                    <h4>Vintage Backbag</h4>
+                    <small class="price">$54.99 <span>$94.99</span></small>
+                  </div>
+                  <div class="counter" counter="1">
+                    <button id="increment">+</button>
+                    <input type="text" value="1">
+                    <button id="decrement">-</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="article--details" >
+                <img src="image/photo2.png" alt="">
+                <div class="article--info">
+                  <div class="article--name">
+                    <h4>Levi Shoes</h4>
+                    <small class="price">$74.99 <span>$94.99</span></small>
+                  </div>
+                  <div class="counter" counter="2">
+                    <button id="increment">+</button>
+                    <input  type="text" value="1">
+                    <button id="decrement">-</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bill">
+              <span class="underline"></span>
+              <div class="shipping">
+                <h4>Shipping</h4>
+                <small class="price">$19</small>
+              </div>
+              <span class="underline"></span>
+              <div class="total">
+                <h4>Total</h4>
+                <small class="price"></small>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <footer>
+      created by <a href="">devalade</a> - <a href="https://devchallenges.io/">devChallenges.io</a>
+    </footer>
+  </body>
+</html>

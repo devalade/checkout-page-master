@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+:root {
+    --main: #4E5150;
+    --input-color: #828282;
+    --bg-btn: #E0E0E0;
+    --bg-article: #F2F2F2;
+    --orange: #F2994A;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Montserrat;
+    color: #4E5150;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+} 
+
+body {
+    padding: 0;
+    margin: 0;  
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.container {
+    max-width: 65em;
+    margin: 0 auto;
+    padding: 4em 1em 1em 1em;
+}
+
+.success--message {
+    position: absolute;
+    padding: 0 2em;
+    height: 0;
+    top: 0;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;    
+    background-color: rgb(84, 180, 84);
+}
+
+.success--message p {
+    color: #F2F2F2;
+}
+.success--message.error {
+    height: auto;
+    top: 1em;
+    transition: all .3s ease;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; 
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h4 {
+    padding-top: 2.5em;
+}
+
+form {
+    width: 30em;
+}
+
+.form--group {
+    margin-top: .8em;
+}
+
+.form--group label {
+    font-size: .7em;
+}
+
+.custom--input input, .custom--input select {
+    width: 100%;
+    padding: 1.2em;
+    padding-left: 3.5em;
+    border-radius: 12px;
+    border: 1px solid var(--input-color);
+}
+
+.custom--input input.error {
+    border: none;
+    box-shadow: 0px 0px 1px 2px rgba(202,33,33,0.75);
+    -webkit-box-shadow: 0px 0px 1px 2px rgba(202,33,33,0.75);
+    -moz-box-shadow: 0px 0px 1px 2px rgba(202,33,33,0.75);
+    transition: box-shadow .3s linear;
+}
+
+.message {
+    display: inline-block;
+    font-weight: normal;
+    visibility: hidden;
+    margin-top: 1px;
+    color: rgb(202, 33, 33);
+}
+
+.message.error {
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.custom--input span {
+    position: absolute;
+    margin-left: .5em;
+    padding-top: .6em;
+    color: var(--input-color);
+}
+
+.custom--input input::placeholder {
+    font-size: 1.2em;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .form--group {
+    width: 47%;
+}
+
+.custom--select {
+    position: relative;
+}
+
+.custom--select select {
+    appearance: none;
+    background: none;
+    /* overflow: hidden; */
+}
+
+.custom--select::before {
+    content: '\25BC';
+    position: absolute;
+    top: 35%;
+    right: .5em;
+    background: #E0E0E0;
+    cursor: pointer;
+}
+
+.form--group input[type="checkbox"] {
+    height: 1.3em;
+    width: 1.3em;
+}
+
+form button {
+    float: right;
+    padding: .75em 1.2em;
+    font-size: 1em;
+    border-radius: 10px;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    margin-top: 2em;
+}
+
+.buy--article {
+    width: 25em;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-article);
+    padding: 2em;
+    margin-top: 2em;
+    border-radius: 12px;
+}
+
+.article--details {
+    display: flex;
+    margin-bottom: 2em;
+}
+.article--details:last-child {
+    margin-bottom: 5em;
+}
+
+.article--details img {
+    width: 10em;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-right: 2em;
+}
+
+.article--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.article--info h4 {
+    padding: 0;
+    margin-bottom: .4em;
+    font-size: 1em;
+}
+
+.article--name small {
+    color: var(--orange);
+    font-size: .9em;
+}
+
+.article--name small span {
+    color: var(--main);
+    font-size: .7em;
+    margin-left: 1em;
+    text-decoration: line-through;
+}
+
+.counter {
+    position: relative;
+    display: flex;
+    height: 3em;
+    width: 60%;
+    border: 1px solid var(--input-color);
+    border-radius: 12px;
+}
+
+.counter input {
+    appearance: none;
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+.counter input[value] {
+    text-align: center;
+    font-size: 1em;
+}
+
+#increment, #decrement {
+    position: absolute;
+    border: none;
+    line-height: 0;
+    height: 21px;
+    width: 21px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    border-radius: 4px;
+    background: var(--bg-btn);
+    cursor: pointer;
+}
+
+#increment {
+    top: 25%;
+    left: 8px;
+}
+
+#decrement {
+    top: 25%;
+    right: 8px;
+}
+.bill {
+    width: 100%;
+}
+
+.bill .underline {
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background-color: #BDBDBD;
+}
+
+.bill .shipping, .bill .total {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 0;
+    font-weight: 700;
+} 
+
+.bill .total {
+    padding-bottom: 0;
+}
+
+.bill h4 {
+    padding: 0;
+}
+
+footer {
+    color: #BDBDBD;
+    text-align: center;
+    margin-top: 4em;
+}
+
+footer a {
+    color: #BDBDBD;
+}
+
+footer a:first-child {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+@media (max-width: 1040px) {
+    .container {
+        width: 60em;
+    }
+}
+
+@media (max-width: 970px) {
+    .container {
+        width: 100%;
+    }
+    form {
+        width: 48%;
+    }
+
+    .buy--article {
+        width: 48%;
+    }
+
+    .custom--input input::placeholder {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 740px) {
+    .container {
+        padding-top: 2em;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .custom--input input, .custom--input select {
+        padding: 1em;
+        padding-left: 3em;
+
+    }
+
+    form {
+        width: 100%;
+        /* overflow: hidden; */
+    }
+
+    .buy--article {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 2em;
+    }
+    .buy--article {
+        padding: 1em 1em;
+    }
+}
