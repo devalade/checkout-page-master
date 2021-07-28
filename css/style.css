@@ -143,10 +143,11 @@ form {
     /* overflow: hidden; */
 }
 
-.custom--select::before {
-    content: '\25BC';
+.custom--select #expand--more {
     position: absolute;
-    top: 35%;
+    top: 25%;
+    padding: 0; 
+    border-radius: 4px;
     right: .5em;
     background: #E0E0E0;
     cursor: pointer;
@@ -342,12 +343,10 @@ footer a:first-child {
     .custom--input input, .custom--input select {
         padding: 1em;
         padding-left: 3em;
-
     }
 
     form {
         width: 100%;
-        /* overflow: hidden; */
     }
 
     .buy--article {

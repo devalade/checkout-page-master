@@ -13,6 +13,9 @@ const postalCode = document.getElementById("postal_code");
 const successMessage = document.getElementsByClassName("success--message");
 const counters = document.querySelectorAll('.counter');
 let total = document.querySelector(".total .price");
+const select = document.querySelector('select');
+const expandMore = document.querySelector('#expand--more');
+console.log(select);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
